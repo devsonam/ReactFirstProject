@@ -1,0 +1,9 @@
+[
+    {"name": "Car Two", "price" : 2453, "fuel": "Diesel"},
+    {"name": "Car Three", "price" : 42424, "fuel": "Diesel"},
+    {"name": "Car Four", "price" : 5676, "fuel": "Diesel"},
+    {"name": "Car Five", "price" : 2323, "fuel": "Diesel"},
+    {"name": "Car Six", "price" : 90563, "fuel": "Diesel"},
+    {"name": "Car Seven", "price" : 67889, "fuel": "Diesel"},
+    {"name": "Car Eight", "price" : 15667, "fuel": "Diesel"}
+]
