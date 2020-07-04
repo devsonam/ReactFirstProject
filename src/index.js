@@ -21,6 +21,7 @@ import Doctor from './Doctor';
 import Company from './Company';
 import CarInfo from './Car';
 import Crud from './Api';
+import LoginUser from './Login';
 const componentData = (
   <HashRouter>
   <TopNav />
@@ -34,9 +35,15 @@ const componentData = (
     <Route exact path = "/company" component = {Company}/>
     <Route exact path = "/car-Info" component = {CarInfo}/>
     <Route exact path = "/crud" component = {Crud}/>
+    <Route exact path = "/login" component = {LoginUser}/>
    <MyFooter />
   </HashRouter>
 );
-ReactDOM.render(componentData, document.getElementById('root'));
+if(sessionStorage.getItem("username")==null){
+  ReactDOM.render(<LoginUser />, document.getElementById('root'));
+}else{
+  ReactDOM.render(componentData, document.getElementById('root'));
+}
+
 
 serviceWorker.unregister();

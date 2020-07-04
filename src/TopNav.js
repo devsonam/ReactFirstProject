@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 class TopNav extends Component{
+    logOut = () =>{
+        sessionStorage.clear();
+        window.location.href = "../";
+    }
     render(){
         return(
             <nav className="navbar navbar-expand-sm bg-primary navbar-light">
@@ -39,6 +43,11 @@ class TopNav extends Component{
 
                 <li className="nav-item">
                 <Link className="nav-link text-white" to="/crud">Crud Operation</Link>
+                </li>
+
+                <li className="nav-item">
+                <a className="nav-link text-white" href = "javascript:void(0)" onClick={this.logOut}>
+                Welcome, {sessionStorage.getItem("username")} - Logout</a>
                 </li>
 
             </ul>
